@@ -1,5 +1,5 @@
-import {appleImg, bagImg, searchImg} from "../utils";
-import {navLists} from "../constants";
+import { appleImg, bagImg, searchImg } from "../utils";
+import { navLists } from "../constants";
 const Navbar = () => {
   return (
     <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center ">
@@ -7,7 +7,10 @@ const Navbar = () => {
         <img src={appleImg} alt="Apple" className="w-5 h-6" />
         <div className="flex flex-1 justify-center max-sm:hidden">
           {navLists.map((nav) => (
-            <div key={nav} className="px-5 text-sm text-gray hover:text-white cursor-pointer transition-all">
+            <div
+              key={nav}
+              className="px-5 text-sm text-gray hover:text-white cursor-pointer transition-all"
+            >
               {nav}
             </div>
           ))}
@@ -18,7 +21,7 @@ const Navbar = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
