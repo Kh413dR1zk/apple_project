@@ -19,8 +19,8 @@ const ModelView = ({
     <View
       index={index}
       id={gsapType}
-      className={`border-2 border-red-500 w-full h-full absolute ${
-        index === 2 ? "right-[-100]" : ""
+      className={`w-full h-full absolute ${
+        index === 2 ? "right-[-100%]" : ""
       }`}
     >
       {/* ambient light  */}
@@ -36,6 +36,8 @@ const ModelView = ({
         enableZoom={false}
         enablePan={false}
         rotateSpeed={0.4}
+        target={new THREE.Vector3(0, 0, 0)}
+        onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
       />
 
       <group
